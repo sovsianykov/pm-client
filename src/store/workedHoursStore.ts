@@ -54,6 +54,17 @@ export class WorkedHoursStore {
             console.log(error);
         }
     }
+     clean() {
+        try {
+
+             runInAction(() => {
+                this.workedHours = [];
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 
 export const workedHoursStore = new WorkedHoursStore();

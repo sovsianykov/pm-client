@@ -45,8 +45,9 @@ const AddWorkedHoursForm = observer(() => {
 
         try {
             await workRepo.createWorkedHours(auth.user?.email, Number(data.hours), date, data.status);
+            setTimeout(() => router.push("/"), 0);
             reset();
-            router.push("/");
+
         } catch (error) {
             console.error("❌ Failed to submit:", error);
         }

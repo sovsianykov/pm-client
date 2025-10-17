@@ -1,6 +1,6 @@
 "use client";
 import {AuthContextProvider} from "@/contexts/authContext";
-import UsersSignupForm from "@/components/Forms/UsersSignupForm";
+import UsersSignupForm from "@/components/Forms/RegisterForm";
 
 
 export default function RegisrePage() {

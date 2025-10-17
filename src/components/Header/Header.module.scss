@@ -9,19 +9,15 @@
     left: 0;
     width: 100vw;
     background: #e2e2e2;
-    box-shadow: 0rem 0.03rem 0.03rem -0.02rem rgba(0, 0, 0, 0.2), 0rem 0.03rem 0.04rem 0rem rgba(0, 0, 0, 0.14), 0rem 0.01rem 0.08rem 0rem rgba(0, 0, 0, 0.12);
-}
-
-.menu-content {
-    min-width: 1300px;
-    max-width: 1450px;
-    margin: 0 auto;
-    position: relative;
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
 }
 .subContainer {
     min-width: calc(100% - 350px);
     display: flex;
+    width: 100%;
     align-items: center;
+    justify-content: flex-start;
+    position: relative;
 }
 
 
@@ -48,5 +44,16 @@
     height: 45.5px;
     flex-wrap: nowrap;
     align-items: center;
+}
 
+.nav-item {
+
+    @apply h-[1rem] text-[1rem] mx-[5px] flex items-center    rounded-[0.25rem];
+    font-weight: 500;
+    padding: 13px 10px 13px  7px;
+
+    &:hover, &.active {
+        background: #ffffff;
+        color: #284086;
+    }
 }

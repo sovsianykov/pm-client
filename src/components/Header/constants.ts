@@ -7,7 +7,7 @@ export const navigationItems = [
     {
         id: '2',
         title: 'Project',
-        path: '/'
+        path: '/project'
     },
     {
         id: '3',
@@ -22,32 +22,32 @@ export const navigationItems = [
     {
         id: '5',
         title: 'Report',
-        path: '/'
+        path: '/order'
     },
     {
         id: '6',
         title: 'Extras',
-        path: '/'
+        path: '/extras'
     },
     {
         id: '7',
         title: 'Review',
-        path: '/'
+        path: '/review'
     },
     {
         id: '8',
         title: 'Events',
-        path: '/'
+        path: '/events'
     },
     {
         id: '9',
         title: 'Deals',
-        path: '/'
+        path: '/deals'
     },
     {
         id: '10',
         title: 'Security',
-        path: '/'
+        path: '/security'
     },
 
 ]

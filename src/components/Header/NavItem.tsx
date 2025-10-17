@@ -1,10 +1,20 @@
 import React from 'react';
 import Link from "next/link";
 import styles from './Header.module.scss'
-
+import {usePathname} from "next/navigation";
+import classNames from "classnames";
 const NavItem = ({text,path}:{text:string; path:string}) => {
+
+    const pathname = usePathname();
+
+    const isActive =
+        pathname === path
+        // (path !== "/" && pathname.startsWith(path))
+
     return (
-        <li className='h-[1rem] text-[1rem] py-[10px] mx-[5px] flex items-center pr-[26px] font-[500] tracking-wide'>
+        <li className={classNames(styles['nav-item'], {
+            [styles.active]: isActive,
+        })}>
             <Link href={path}>{text}
                 <span  className={styles['arrow-down']}/>
             </Link>

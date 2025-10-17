@@ -25,10 +25,10 @@ class AuthStore {
     }
 
     /** Login user and store tokens */
-    async login(firstName: string, lastName: string ,email: string, password: string) {
+    async login(email: string, password: string) {
         this.isLoading = true;
         try {
-            const { data } = await $api.post("/users/login", { firstName,lastName,email, password });
+            const { data } = await $api.post("/users/login", {email, password });
 
             runInAction(() => {
                 this.user = data.user;
