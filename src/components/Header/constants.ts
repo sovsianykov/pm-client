@@ -47,7 +47,7 @@ export const navigationItems = [
     {
         id: '10',
         title: 'Security',
-        path: '/security'
+        path: '/admin'
     },
 
 ]
