@@ -39,13 +39,13 @@ const Button = forwardRef<HTMLButtonElement | null, SmallButtonProps>(
                 role={role}
                 onClick={onClickHandler}
                 className={classNames(
-                   'leading-[26px] h-[2.5rem] cursor-pointer rounded-sm font-[500] tracking-wide',
+                   'leading-[26px] h-[2.5rem] cursor-pointer px-[1rem] text-[#ffffff] rounded-sm font-[500] tracking-wide',
                     {
                         'underline !text-[#827127] bg-transparent hover:bg-transparent min-w-0 px-0  !text-[16px]':
                         textOnly,
                         'text-white bg-[#827127] hover:bg-[#64582b] min-w-[106px] px-6':
                             !inverted && !textOnly,
-                        'border border-[#827127] text-goldBase bg-white min-w-[106px] px-6':
+                        'border border-[#827127] text-goldBase bg-[#ffffff] min-w-[106px] px-6':
                         inverted,
                     },
                     className,

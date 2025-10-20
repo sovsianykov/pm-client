@@ -3,9 +3,9 @@ import {AuthContextProvider} from "@/contexts/authContext";
 import UsersSignupForm from "@/components/Forms/RegisterForm";
 
 
-export default function RegisrePage() {
+export default function RegisterPage() {
 
-    return (<main className = "bg-gray-200 h-screen">
+    return (<main className = "container">
             <AuthContextProvider>
                 <UsersSignupForm/>
             </AuthContextProvider>

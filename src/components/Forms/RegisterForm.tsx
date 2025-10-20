@@ -58,7 +58,7 @@ export default observer(function UsersSignupForm() {
         };
 
         return (
-            <div className=' mx-auto md:w-[432px] px-[1.5rem]'>
+            <div className=' mx-auto max-w-[380px] px-[1.5rem]'>
                 <div className='text-[2rem] mb-[1rem] font-[500]'>Register</div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h1 className='text-[2rem] font-[500]'>Register</h1>

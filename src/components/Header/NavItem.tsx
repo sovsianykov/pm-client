@@ -9,7 +9,6 @@ const NavItem = ({text,path}:{text:string; path:string}) => {
 
     const isActive =
         pathname === path
-        // (path !== "/" && pathname.startsWith(path))
 
     return (
         <li className={classNames(styles['nav-item'], {

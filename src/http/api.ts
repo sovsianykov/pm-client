@@ -20,6 +20,8 @@ $api.interceptors.request.use((config: CustomAxiosRequestConfig) => {
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
+
+    console.log('request token', token);
     return config;
 });
 

@@ -13,14 +13,14 @@ const Timetable = observer(() => {
 
 
     if (workedHoursStore.isLoading) {
-        return <div>Загрузка данных...</div>;
+        return <div>Loading data...</div>;
     }
 
     if (workedHoursStore.error) {
-        return <div>Ошибка: {workedHoursStore.error}</div>;
+        return <div>Error: {workedHoursStore.error}</div>;
     }
 
-    const {previousWeek, currentWeek, currentMonth, totalTrackedHours} = getWeeksInfo(workHours)
+    const { previousWeek, currentWeek, currentMonth, totalTrackedHours } = getWeeksInfo(workHours)
 
 
     return (<div className=' flex flex-col items-center'>

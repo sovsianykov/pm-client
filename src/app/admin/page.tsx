@@ -1,15 +1,16 @@
-import AdminContainer from "@/containers/Admin/AdminContainer";
-import {getAllUsers} from "@/http/getAllUsers";
+"use client";
 
+import {AuthContextProvider} from "@/contexts/authContext";
+import AdminContainer from "@/containers/AdminContainer/AdminContainer";
 
-export default async function AdminPage() {
+export default  function RegisterPage() {
 
-    const users = await getAllUsers();
-    console.log('all users' ,users);
 
     return (
-        <div className="p-8 mt-[3rem]">
-            <AdminContainer/>
+        <div className="p-8 mt-20 w-full">
+            <AuthContextProvider>
+               <AdminContainer/>
+            </AuthContextProvider>
         </div>
     );
 }

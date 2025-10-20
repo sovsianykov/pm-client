@@ -54,7 +54,7 @@ const AddWorkedHoursForm = observer(() => {
     };
 
     return (
-        <div className="mx-auto md:w-[432px] px-[1.5rem]">
+        <div className="mx-auto max-w-[280px] px-[1.5rem]">
             <div className="text-[1rem] mb-[1rem] font-[500]">Add Work Hours</div>
             <DatePicker
                 className="px-3"

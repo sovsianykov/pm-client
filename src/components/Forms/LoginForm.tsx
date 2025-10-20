@@ -44,10 +44,7 @@ const LoginForm: FC<Props> = () => {
           auth.login(email, password)
 
             toast.success("User successfully logged in");
-            setTimeout(() => router.push("/"), 0);
-
-
-
+            setTimeout(() => router.push("/"), 1000);
             reset();
         } catch (error) {
             console.error("❌ Login failed:", error);

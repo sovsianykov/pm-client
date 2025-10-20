@@ -2,19 +2,15 @@
 "use client";
 import { makeAutoObservable, runInAction } from "mobx";
 import $api from "@/http/api";
-import { Role } from "../../types/WorkHoursResponse";
 import axios from "axios";
+import AdminService from "@/services/AdminService";
+import {IUser} from "../../types/response/user";
 
-interface IUser {
-    id: number;
-    firstName: string;
-    lastName: string;
-    email: string;
-    roles?: Role[];
-}
+
 
 class AuthStore {
     user: IUser | null = null;
+    users: IUser[] = [];
     accessToken: string | null = null;
     refreshToken: string | null = null;
     isAuth = false;
@@ -137,6 +133,23 @@ class AuthStore {
     /** Check auth on app start */
     async checkAuth() {
         await this.refresh();
+    }
+
+    async fetchAllUsers() {
+        this.isLoading = true;
+        try {
+            const { data } = await AdminService.getAllUsers();
+            console.log(data);
+            runInAction(() => {
+                this.users = data;
+            });
+        } catch (error) {
+            console.error("Failed to fetch all users in AuthStore:", error);
+        } finally {
+            runInAction(() => {
+                this.isLoading = false;
+            });
+        }
     }
 }
 

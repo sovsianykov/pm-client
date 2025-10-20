@@ -9,9 +9,7 @@ import {toJS} from "mobx";
 export default observer(function Project() {
     const workedHoursStore = useWorkedHours();
     const auth = useAuth()
-    useEffect(() => {
-        auth.checkAuth()
-    }, []);
+
     useEffect(() => {
         const email = toJS(auth.user?.email);
         if (!email) return;
@@ -21,7 +19,7 @@ export default observer(function Project() {
     return (
         <div className="w-full h-screen">
             <div className="flex mt-[100px] items-center justify-center">
-                <Timetable month="October" />
+                <Timetable  />
             </div>
         </div>
     );
